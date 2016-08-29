@@ -65,6 +65,20 @@ local result=$(xxd -plain 0.bin)
 assert_equals "$input" "$result"
 }
 
+# on uneven input, the hex2bin utility stops after the last recognized byte
+hex2bin_test_uneven_input() {
+echo 001 | ./hex2bin > 0.bin
+local result=$(xxd -plain 0.bin)
+assert_equals "00" "$result"
+}
+
+# on non-hex input, the hex2bin utility stops after the last recognized byte
+hex2bin_test_nonhex_input() {
+echo 00xx | ./hex2bin > 0.bin
+local result=$(xxd -plain 0.bin)
+assert_equals "00" "$result"
+}
+
 # run all defined tests
 run_tests
 
