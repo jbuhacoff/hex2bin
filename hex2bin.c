@@ -1,7 +1,7 @@
 /*
  * hex2bin - converts data in hexadecimal form to binary form
  *
- * Copyright (C) 2013 Jonathan Buhacoff <jonathan@buhacoff.net>
+ * Copyright (C) 2013-2016 Jonathan Buhacoff <jonathan@buhacoff.net>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
